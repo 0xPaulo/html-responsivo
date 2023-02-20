@@ -8,9 +8,21 @@ body {
   background-color: #f7f7f7;
 }
 
+@media (max-width: 765px) {
+  body {
+    gap: 1.2rem;
+    margin-top: 30px;
+  }
+}
+
 img {
   max-width: 100%;
   display: block;
+}
+
+.cover-bike img {
+  object-fit: cover;
+  height: 100%;
 }
 
 a {
@@ -41,6 +53,12 @@ p {
   justify-items: center;
 }
 
+@media (max-width: 765px) {
+  .header {
+    gap: 30px;
+  }
+}
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -61,11 +79,22 @@ p {
 .menu a:hover {
   border-color: #e21;
 }
-
 .conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1000px;
+}
+
+@media (max-width: 670px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 950px) {
+  .conteudo-2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .introducao {
@@ -79,18 +108,30 @@ p {
   justify-items: end;
 }
 
+@media (max-width: 670px) {
+  .introducao{
+    text-align: left;
+    justify-items: start;
+  }
+}
+
 .introducao h1 {
   font-size: 2rem;
 }
 
 .introducao::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 4px;
   background: #e21;
   position: absolute;
   top: 30px;
   right: -30px;
+}
+@media (max-width: 670px) {
+  .introducao::before {
+    display: none;
+  }
 }
 
 .botao {
@@ -112,9 +153,14 @@ p {
   text-align: right;
   padding: 40px;
   align-self: center;
-  background-image: url('./img/onda.svg');
+  background-image: url("./img/onda.svg");
 }
-
+@media (max-width: 820px) {
+  .subtitulo {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
 .vantagens {
   background: #fff;
   padding: 40px;
